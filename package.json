@@ -1,0 +1,14 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task.js",
+  "scripts": {
+    "task1": "npx browser-sync start --server --watch --no-notify --cwd ./task1 --startPath /task1"
+  },
+  "dependencies": {
+    "browser-sync": "2.26.7"
+  },
+  "author": "",
+  "license": "ISC"
+}
