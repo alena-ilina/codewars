@@ -1,0 +1,1 @@
+document.querySelector('#testsCount').innerHTML = store.testsCount;

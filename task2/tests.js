@@ -62,7 +62,7 @@ describe('тесты для isEven', () => {
     chai.expect(isEven(2)).to.equal(false)
   });
   it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
+    chai.expect(isEven(2)).to.equal(true)
   });
   it('Возвращаем true, если число четное', () => {
     chai.expect(isEven(2)).to.equal(true)

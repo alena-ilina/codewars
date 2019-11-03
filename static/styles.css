@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Choujikuu; /* Имя шрифта */
+  src: url('./ChoujikuuYousai.otf'); /* Путь к файлу со шрифтом */
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes walking {
+  0% {
+    margin-top: -80px;
+    background: url('./runningCat.svg') no-repeat;
+  }
+  25% {
+    margin-top: -100px;
+    background: url('./runningCat1.svg') no-repeat;
+  }
+  50% {
+    margin-top: -80px;
+    background: url('./runningCat.svg') no-repeat;
+  }
+  75% {
+    margin-top: -100px;
+    background: url('./runningCat1.svg') no-repeat;
+  }
+  100% {
+    margin-top: -80px;
+    background: url('./runningCat.svg') no-repeat;
+  }
+}
+
+html, body {
+  background-color: #282b3d;
+}
+
+.progressBar__wrapper {
+  position: relative;
+  margin-top: 100px;
+  height: 60px;
+  border-radius: 20px;
+  background: url('./pattern.svg') repeat-x #f8ce40;
+  width: 80%;
+}
+
+.ball {
+  position: absolute;
+  z-index: 1;
+  right: -70px;
+  top: 50%;
+  margin-top: -46px;
+  background: url('./ball.svg');
+  width: 114px;
+  height: 89px;
+  transition: transform .3s;
+}
+
+.progressBar__wrapper._finish .ball {
+  transform: scale(0);
+}
+
+.cat {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10px;
+  margin-top: -101px;
+  width: 219px;
+  height: 147px;
+}
+
+.cat._sad {
+  background: url('./sadCat.svg') no-repeat;
+}
+
+.cat._stay {
+  background: url('./funnyCat.svg') no-repeat;
+}
+
+.cat._walking {
+  background: url('./runningCat.svg') no-repeat;
+  animation: walking 1s infinite;
+}
+
+.cat._finish {
+  background: url('./finishCat.svg') no-repeat;
+  animation: fade2 .5s;
+  top: 68px;
+}
+
+.progressBar__text {
+  margin-top: 50px;
+  font-family: Choujikuu;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #FFFFFF;
+}

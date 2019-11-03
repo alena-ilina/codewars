@@ -4,7 +4,8 @@
   "description": "",
   "main": "task.js",
   "scripts": {
-    "task1": "npx browser-sync start --server --watch --no-notify --cwd ./task1 --startPath /task1"
+    "task1": "npx browser-sync start --server --watch --no-notify --cwd ./task1 --startPath /task1",
+    "task2": "npx browser-sync start --server --watch --no-notify --cwd ./task1 --startPath /task2"
   },
   "dependencies": {
     "browser-sync": "2.26.7"
