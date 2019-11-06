@@ -1,73 +1,58 @@
-store.testsCount = 21;
-
-describe('тесты для isEven', () => {
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
+store.testsCount = 11;
+// Бага с котом!
+describe('Выбираем закуску к винишку', () => {
+  it('Если передали "Бордо", то вернуть "Камамбер"', () => {
+    chai.expect(chooseAppetites('Бордо')).to.equal('Камамбер')
   });
 
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
+  it('Если передали "Bordeaux", то вернуть "Camembert"', () => {
+    chai.expect(chooseAppetites('Bordeaux')).to.equal('Camembert')
   });
 
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
+  it('Если функцию вызвать дважды с одним и тем же запрошенным вином, то вернуть "Ты меня уже спрашивал, забыл что ли?"', () => {
+    chai.expect((function () {
+      chooseAppetites('Бордо')
+      chooseAppetites('Бордо')
+
+      return 'Ты меня уже спрашивал, забыл что ли?'
+    })())
+      .to.equal('Ты меня уже спрашивал, забыл что ли?')
   });
 
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(false)
-  });
-  it('Возвращаем true, если число четное', () => {
-    chai.expect(isEven(2)).to.equal(true)
+  it('Если передали "Moscatel", то вернуть "Не важно! Главное, добавь кресло, кота или собаку, и камин!"', () => {
+    chai.expect(chooseAppetites('Moscatel')).to.equal('Не важно! Главное, добавь кресло, кота или собаку, и камин!')
   });
 
+  it('Если передали "Carmenere", то вернуть "Не ищи особой закуски. Любой ужин будет с ним ещё лучше!"', () => {
+    chai.expect(chooseAppetites('Carmenere')).to.equal('Не ищи особой закуски. Любой ужин будет с ним ещё лучше!')
+  });
+
+  it('Если передали "Красное вино", то вернуть "Так из тебя эстета не сделаешь. Нужно знать сорт винограда. Изучи на бутылке!"', () => {
+    chai.expect(chooseAppetites('Красное вино')).to.equal('Так из тебя эстета не сделаешь. Нужно знать сорт винограда. Изучи на бутылке!')
+  });
+
+  it('Если передали пустую строку, то вернуть "Истина в вине, а не в тишине"', () => {
+    chai.expect(chooseAppetites('')).to.equal('Истина в вине, а не в тишине')
+  });
+
+  it('Если у переданного имени вина название длиннее 10 символов, то выводить дополнительно "Такое название фиг запомнишь! Ну и вино же ты выбрал!"', () => {
+    chai.expect(chooseAppetites('Киндзмараули')).to.equal('Такое название фиг запомнишь! Ну и вино же ты выбрал!')
+  });
+
+  it('Если передали неизвестное имя вина, вернуть "Я не разбираюсь, попробуй что-то нейтральное: птицу или твёрдый сыр"', () => {
+    chai.expect(chooseAppetites('Мерло')).to.equal('Я не разбираюсь, попробуй что-то нейтральное: птицу или твёрдый сыр')
+  });
+
+  // переделать на 11й пункт
+  it('Если передать "Сыр", вернуть "Мы по вину подсказываем закуски, а не наоборот"', () => {
+    chai.expect(chooseAppetites('Сыр')).to.equal('Мы по вину подсказываем закуски, а не наоборот')
+  });
+
+
+
+  it('Если передать "Сыр", вернуть "Мы по вину подсказываем закуски, а не наоборот"', () => {
+    chai.expect(chooseAppetites('Сыр')).to.equal('Мы по вину подсказываем закуски, а не наоборот')
+  });
   afterEach(function () {
     if (this.currentTest.state === 'passed') {
       store.successTestsCount += 1;
