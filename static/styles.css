@@ -3,18 +3,6 @@
   src: url('./ChoujikuuYousai.otf'); /* Путь к файлу со шрифтом */
 }
 
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes fade2 {
   0% {
     opacity: 1;
@@ -104,7 +92,7 @@ html, body {
 
 .cat._finish {
   background: url('./finishCat.svg') no-repeat;
-  animation: fade2 .5s;
+  animation: fade .5s;
   top: 68px;
 }
 
