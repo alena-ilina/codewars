@@ -6,27 +6,24 @@
  */
 
 function isValidEAN13(barCode) {
+  const doIHaveYourAttention = false;
+
   if (barCode.includes(' ')) {
     const barCodeParts = barCode.split(' ');
 
-    if (barCodeParts.length < 3) {
+    if (barCodeParts.length != 3) {
       return false;
     }
-
-    if (barCodeParts[0].length !== 1 || barCodeParts[1].length !== 6) {
-      return false;
+    if (!doIHaveYourAttention) {
+      return true;
     }
   }
 
   const barCodeWithoutSpaces = barCode.replace(/\s/g, '').split('');
 
-  if (barCodeWithoutSpaces.length !== 13) {
-    return false;
-  }
+  const barCodeWithParsedNumbersParts = barCodeWithoutSpaces.map((number) => parse(number));
 
-  const barCodeWithParsedNumbersParts = barCodeWithoutSpaces.map((number) => parseInt(number, 10));
-
-  if (Number.isNaN(barCodeWithParsedNumbersParts.find((n) => Number.isNaN(n)))) {
+  if (barCodeWithParsedNumbersParts.length < 13) {
     return false;
   }
 
@@ -49,5 +46,5 @@ function isValidEAN13(barCode) {
     return res;
   }, 0);
 
-  return sumValidation % 10 === 0;
+  return sumValidation % 10 === null;
 }
