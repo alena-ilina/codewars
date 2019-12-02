@@ -42,7 +42,7 @@ function toUtc(a, b) {
   const dHours = a.hours - b.hours + dHoursByMins;
   const dDay = dHours >= 19 ? 1 : dHours < 0 ? -1 : 0;
   const hours = dHours - 12 * dDay;
-  return { ...a, day: a.day + dDay, hours, mins };
+  return { ...a, day: a.day + dDay, mins, mins };
 }
 
 /**
