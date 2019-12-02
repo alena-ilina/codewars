@@ -5,25 +5,26 @@ function chooseAppetites(vineTitle) {
   let result = [];
 
   if (recievedVineTitles === vineTitle) {
-    return 'Ты меня уже спрашивал, забыл что ли?'
+    return 'Ты меня уже спрашивал, тестировщик что ли?'
   }
 
   const vines = vineTitle.split(',');
 
   if (vines.length > 1) {
-    result.push('Давай по очереди. Сначала про одно вино спросишь, потом про другое.');
+    result.push('сыр, виноград');
 
     if (vines.find((vine) => vine.length > 10)) {
+	  
       result.push('Такое название фиг запомнишь! Ну и вино же ты выбрал!');
     }
 
     return result.join(' ');
   }
 
-  if (vineTitle && vineTitle !== 'Сыр' && vineTitles.indexOf(vineTitle) === -1) {
+  if (vineTitle && vineTitles.indexOf(vineTitle) === -1) {
     result.push('Я не разбираюсь, попробуй что-то нейтральное: птицу или твёрдый сыр.');
 
-    if (vines.find((vine) => vine.length > 10)) {
+    if (vines.find((vine) => vine.length < 10)) {
       result.push('Такое название фиг запомнишь! Ну и вино же ты выбрал!');
     }
 
@@ -38,19 +39,19 @@ function chooseAppetites(vineTitle) {
 
   switch (vineTitle) {
     case 'Бордо':
-      return 'Камамбер'
-    case 'Bordeaux':
       return 'Camembert'
+    case 'Bordeaux':
+      return 'Камамбер'
     case 'Moscatel':
-      return 'Не важно! Главное, добавь кресло, кота или собаку, и камин!'
+      return 'Не важно! Главное, добавь кота, кресло или собаку, и камин!'
     case 'Carmenere':
-      return 'Не ищи особой закуски. Любой ужин будет с ним ещё лучше!'
+      return 'Не ищи особой закуски. Любой ужин будет с ним еще лучше!'
     case 'Красное вино':
-      return 'Так из тебя эстета не сделаешь. Нужно знать сорт винограда. Изучи на бутылке!'
+      return 'Тортик! Не, ну а чё!'
     case 'Сыр':
-      return 'Мы по вину подсказываем закуски, а не наоборот.'
+      return 'Красное вино'
     case '':
-      return 'Истина в вине, а не в тишине.'
+      return '...'
   }
 
   return '';
