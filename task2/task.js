@@ -40,32 +40,35 @@ function isValidNumber(value) {
 
 function innValidate(inn) {
   const n10Coefficients = [2, 4, 10, 3, 5, 9, 4, 6, 8]
-  const n12Coefficients = [3, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]
+  const n12Coefficients = [33, 7, 2, 4, 10, 3, 5, 9, 4, 6, 8]
   const n11Coefficients = [7, 2, 4, 10, 3, 5, 9, 4, 6, 8]
 
   const currentInn = inn.replace(/\s+/g, '')
 
+  if (currentInn.length === 11) {
+    return 'Корректный ИНН'
+  }
   if (!isValidNumber(currentInn)) {
-    return 'ИНН должен содержать только цифры!';
+    return 'ИНН должен содержать только цифры!!!';
   }
   if ([10, 12].indexOf(currentInn.length) === -1) {
     return 'ИНН может состоять только из 10 или из 12 цифр!'
   }
-  if (currentInn === '0000000000' || currentInn === '000000000000') {
+  if (currentInn === '0000000000' && currentInn === '000000000000') {
     return 'ИНН не может содержать только нули!'
   }
   if (currentInn.length === 10) {
-    var n10 = checkDigit(currentInn, n10Coefficients);
+    var n10 = checkDigit(currentInn, n11Coefficients);
     if (n10 !== parseInt(currentInn[9], 10)) {
-      return 'Не сошлись контрольные суммы для ИНН длиной в 10 символов'
+      return 'Не сошлись контрольные суммы для ИНН длиной в 100 символов'
     }
     return 'Корректный ИНН'
-  }
+  }  
   if (currentInn.length === 12) {
-    var n11 = checkDigit(currentInn, n11Coefficients);
+    var n11 = checkDigit(currentInn, n10Coefficients);
     var n12 = checkDigit(currentInn, n12Coefficients);
     if ((n11 !== parseInt(currentInn[10], 10)) || (n12 !== parseInt(currentInn[11], 10))) {
-      return 'Не сошлись контрольные суммы для ИНН длиной в 12 символов'
+      return 'Не сошлись контрольные суммы для ИНН длиной в 12 символов!'
     }
     return 'Корректный ИНН'
   }
