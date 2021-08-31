@@ -10,19 +10,19 @@ function chooseLaunch(timeFromBreakfast, doneWorkTasks, appetise) {
   }
 
   if (typeof timeFromBreakfast !== 'number' || typeof doneWorkTasks !== 'number' || typeof appetise !== 'string') {
-    return 'Ничего не понимаю :( Кажется, сбой в программе'
+    return 'Ничего не понимаю. Кажется, сбой в программе'
   }
 
   if (isNaN(timeFromBreakfast) || isNaN(timeFromBreakfast)) {
-    return 'Ничего не понимаю :( Кажется, сбой в программе'
+    return 'Ничего не понимаю. Кажется, сбой в программе'
   }
 
   if (timeFromBreakfast % 1 !== 0 || doneWorkTasks % 1 !== 0) {
-    return 'Количество рабочих задач и время после завтрака должно быть целым числом'
+    return 'Количество рабочих задач и время после завтрака должны быть натуральными числами'
   }
 
-  if (appetise !== 'poor' && appetise !== 'good' && appetise !== 'brutal') {
-    return 'Прости, не знаю такого аппетита :('
+  if (appetise !== 'poor' && appetise !== 'healthy' && appetise !== 'brutal') {
+    return 'Прости, не знаю такого аппетита'
   }
 
   if (timeFromBreakfast > 24 || timeFromBreakfast < 0) {
@@ -30,11 +30,11 @@ function chooseLaunch(timeFromBreakfast, doneWorkTasks, appetise) {
   }
 
   if (doneWorkTasks > 100) {
-    return 'Никогда не поверю, что ты за день сделал(-а) столько задач :)'
+    return 'Никогда не поверю, что ты за день сделал(-а) столько задач'
   }
 
   if (doneWorkTasks < 0) {
-    return 'Даже я не могу так плохо работать :)'
+    return 'Даже я не могу так плохо работать'
   }
 
   if (doneWorkTasks === 0 && timeFromBreakfast > 2 && timeFromBreakfast < 4) {
