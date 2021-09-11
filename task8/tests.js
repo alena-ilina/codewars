@@ -1,6 +1,11 @@
 store.testsCount = 12;
 
 describe('Выбираем обед', () => {
+  before(() => {
+    // придумать тест кейс
+    chai.expect(chooseLaunch()).to.equal('')
+  });
+
   it('Если хотя бы одно из полей не заполнено, то выводим строку "Не могу посчитать обеды"', () => {
     chai.expect(chooseLaunch(3, 10)).to.equal('Не могу посчитать обеды!')
     chai.expect(chooseLaunch()).to.equal('Не могу посчитать обеды!')
