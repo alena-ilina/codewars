@@ -10,7 +10,8 @@
     "task4": "npx browser-sync start --server --watch --no-notify --cwd ./task4 --startPath /task4",
     "task5": "npx browser-sync start --server --watch --no-notify --cwd ./task5 --startPath /task5",
     "task6": "npx browser-sync start --server --watch --no-notify --cwd ./task6 --startPath /task6",
-    "task8": "npx browser-sync start --server --watch --no-notify --cwd ./task6 --startPath /task8"
+    "task8": "npx browser-sync start --server --watch --no-notify --cwd ./task6 --startPath /task8",
+    "task10": "npx browser-sync start --server --watch --no-notify --cwd ./task10- --startPath /task10"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"
