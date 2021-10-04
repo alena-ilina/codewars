@@ -2,7 +2,7 @@ function getNapoleonCake(resultString) {
   return `${resultString}. Бонус: тортик Наполеон`
 }
 
-function chooseLaunch(timeFromBreakfast, doneWorkTasks, appetise) {
+function chooseLunch(timeFromBreakfast, doneWorkTasks, appetise) {
   let result = "";
 
   if (timeFromBreakfast === undefined || doneWorkTasks === undefined || !appetise) {
