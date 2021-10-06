@@ -65,31 +65,6 @@ const products = {
   },
 }
 
-// const mainProducts = {
-//   soup: 0.2,
-//   navalPasta: 0.8,
-//   grandmasPilaf: 1.2,
-//   broccoli: -0.5,
-//   chickenBreast: 0.1,
-//   chakhokhbili: 0.7,
-//   caesarSalad: 0.8,
-//   cabbageRolls: 0.6,
-// }
-
-// const desserts = {
-//   cake: 1.5,
-//   compote: 1,
-//   coffeWithSugar: 0.3,
-//   cocaCola: 0.9,
-// }
-
-// const extra = {
-//   lazyВumplings: 1.6,
-//   dumplingsWithSourCream: 1.3,
-//   carrotСutlets: 0.5,
-//   pemmican: 0.2
-// }
-
 const exerciseTypes = ['walk', 'run', 'plank', 'tabata', 'squats']
 
 function isEmpty(obj) {
@@ -127,29 +102,4 @@ function chooseExercise(eatenFoods) {
   if (kkal > 4000) return '“Любишь покушать - люби и бёрпи поделать. 60 минут веселья и табаты” (Табата 60 минут)'
 
   if (kkal <= 4000 && kkal >= 2000) return '“Мы за разнообразие в еде и тренировках! Выполни 15 минут приседаний, 4 минуты планки и 20 минут бега” (Приседания 15 минут, Планка 4 минуты, Бег 20 минут)'
-
-  // if (timeFromBreakfast === undefined || doneWorkTasks === undefined || !appetise) {
-  //   return 'Не могу посчитать обеды!'
-  // }
-
-  // if (typeof timeFromBreakfast !== 'number' || typeof doneWorkTasks !== 'number' || typeof appetise !== 'string') {
-  //   return 'Ничего не понимаю. Кажется, сбой в программе'
-  // }
-
-  // if (isNaN(timeFromBreakfast) || isNaN(timeFromBreakfast)) {
-  //   return 'Ничего не понимаю. Кажется, сбой в программе'
-  // }
-
-  // if (timeFromBreakfast % 1 !== 0 || doneWorkTasks % 1 !== 0) {
-  //   return 'Количество рабочих задач и время после завтрака должны быть натуральными числами'
-  // }
-
-  // if (appetise !== 'poor' && appetise !== 'healthy' && appetise !== 'brutal') {
-  //   return 'Прости, не знаю такого аппетита'
-  // }
-
-  // if (timeFromBreakfast > 24 || timeFromBreakfast < 0) {
-  //   return 'Ты что! В сутках всего 24 часа!'
-  // }
-
 }
