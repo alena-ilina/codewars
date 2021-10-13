@@ -5,9 +5,10 @@
   "main": "task.js",
   "scripts": {
     "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness"
+    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch"
   },
   "dependencies": {
-    "browser-sync": "2.26.7"
+    "browser-sync": "^2.26.14"
   },
   "author": "",
   "license": "ISC"
