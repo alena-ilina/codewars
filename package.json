@@ -4,8 +4,7 @@
   "description": "",
   "main": "task.js",
   "scripts": {
-    "task8": "npx browser-sync start --server --watch --no-notify --cwd ./task6 --startPath /task8",
-    "task11": "npx browser-sync start --server --watch --no-notify --cwd ./task11 --startPath /task11"
+    "pizza": "npx browser-sync start --server --watch --no-notify --cwd ./pizza --startPath /pizza"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"
