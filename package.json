@@ -5,6 +5,8 @@
   "main": "task.js",
   "scripts": {
     "tickets": "npx browser-sync start --server --watch --no-notify --cwd ./tickets --startPath /tickets"
+    "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness"
+    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"
