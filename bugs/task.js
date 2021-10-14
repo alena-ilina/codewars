@@ -9,10 +9,10 @@ let team = {"trainee":0,
 let employee = ""
 bugs = 0
 сrutchs = 0
-function getBugsANDCrutchs(){
+function getBugsANDCrutchs(team){
     for(let employee in team) {
         if((team["juniorBackend"] + team["middleBackend"] + team["seniorBackend"]) < 2)   {
-            return("Ошибка, необходимо два бэкенд разработчика")
+            return("Ошибка, необходимо два backend-разработчика")
         }
         
         if((team["juniorFrontend"] + team["middleFrontend"] + team["seniorFrontend"]) < 1)   {
@@ -20,7 +20,7 @@ function getBugsANDCrutchs(){
         }
 
         if(team["teamLead"] === 0)   {
-            return("Ошибка, необходимо teamlead")
+            return("Ошибка, необходим teamlead")
         }
         if (employee ==="trainee"){
             bugs = bugs + team[employee] * 1 * 3;
@@ -55,5 +55,5 @@ function getBugsANDCrutchs(){
             сrutchs = сrutchs + team[employee] * 0 * 3;
         };
 
-        return("Всего: ", bugs, " багов", caches, " костылей в квартал")
+        return("Итого: ", bugs, " багов", caches, " костылей в квартал")
         }}
