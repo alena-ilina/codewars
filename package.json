@@ -4,8 +4,9 @@
   "description": "",
   "main": "task.js",
   "scripts": {
-    "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness"
-    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch"
+    "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness",
+    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch",
+    "bugs": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /bugs"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"
