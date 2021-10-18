@@ -5,6 +5,7 @@
   "main": "task.js",
   "scripts": {
     "stones": "npx browser-sync start --server --watch --no-notify --cwd ./stones --startPath /stones",
+    "pizza": "npx browser-sync start --server --watch --no-notify --cwd ./pizza --startPath /pizza",
     "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness",
     "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch"
   },
