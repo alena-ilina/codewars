@@ -1,5 +1,9 @@
 store.testsCount = 10;
 
+  beforeEach(function() {
+    getCountWin(1,0)
+  });
+
 describe('Играем до 3 побед', () => {
   it('Первый раунд', () => {
     chai.expect(getWin("ножницы", "бумага")).to.equal('Счет 1:0 Ножницы режут бумагу')
