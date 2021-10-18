@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Pixel; /* Имя шрифта */
+  src: url('../../static/pixel.woff'); /* Путь к файлу со шрифтом */
+}
+
+html, body {
+  background-color: #000;
+  height: 100%;
+}
+
+.body__wrapper {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.task_1 {
+  position: relative;
+  height: 800px;
+  background: url('./scene1.png');
+  width: 800px;
+}
+
+.task_2 {
+  position: relative;
+  height: 800px;
+  background: url('./scene2.png');
+  width: 800px;
+}
+
+.task_3, .task_4, .task_5, .task_6 {
+  position: relative;
+  height: 362px;
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task_5 {
+  align-items: flex-start;
+}
+
+.block__text {
+  font-family: Pixel;
+  color: #fff;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.next__button, .go__button, .next__task {
+  position: absolute;
+  width: 292px;
+  padding: 21px 0;
+  border-bottom: 8px solid #CCBA4D;
+  border-left: 8px solid #CCBA4D;
+  border-right: 8px solid #CCBA4D;
+  background-color: #FFE860;
+  text-decoration: none;
+  font-family: Pixel;
+  color: #8C7A0A;
+  font-size: 36px;
+}
+
+.next__button, .next__task {
+  right: 30px;
+  bottom: 10px;
+}
+
+.go__button {
+  bottom: 30px;
+}
+
+.next__task {
+  display: none;
+}
+
+.next__task._visible {
+  display: block;
+}
