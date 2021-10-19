@@ -7,7 +7,8 @@
     "stones": "npx browser-sync start --server --watch --no-notify --cwd ./stones --startPath /stones",
     "pizza": "npx browser-sync start --server --watch --no-notify --cwd ./pizza --startPath /pizza",
     "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness",
-    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch"
+    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch",
+    "weather": "npx browser-sync start --server --watch --no-notify --cwd ./weather --startPath /weather"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"
