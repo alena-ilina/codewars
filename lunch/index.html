@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>HeisenBug</title>
+  <title>Ланч</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../static/mocha.css" />
-  <link rel="stylesheet" href="../static/styles.css" />
+  <link rel="stylesheet" href="./static/styles.css" />
 </head>
 
 <body>
@@ -16,16 +16,7 @@
       successTestsCount: 0,
     };
   </script>
-  <br />
-  <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <div class="progressBar__wrapper">
-      <div class="cat _stay"></div>
-      <div class="ball"></div>
-    </div>
-    <div class="progressBar__text">
-      Котик пробежал <span id="successTestsCount">0</span>&nbsp;/&nbsp;<span id="testsCount"></span> пути
-    </div>
-  </div>
+  <div class="body__wrapper" id="bodyWrapper"></div>
   <div id="mocha"></div>
   <script src="../static/chai.js"></script>
   <script src="../static/mocha.js"></script>
@@ -48,8 +39,29 @@
   <script class="mocha-exec">
     mocha.run();
   </script>
+  <script>
+    if (!localStorage.getItem("task1")) localStorage.setItem('task1', 1)
 
+    const currentStep = localStorage.getItem("task1")
 
+    document.getElementById("bodyWrapper").insertAdjacentHTML('afterbegin',
+      `<div class="task_${currentStep}">
+      ${currentStep === '3' ? '<div class="block__text">Какой чудесный<br>осенний денёк</div>' : ''}
+      ${currentStep === '4' ? '<div class="block__text">Что же мне надеть?<br> Люди одеты так по-разному</div>' : ''}
+      ${currentStep === '5' ? '<div class="block__text">Посмотрю погоду<br> и выберу подходящий наряд<br>там же есть ощущается как</div>' : ''}
+      ${currentStep !== '5' ? currentStep !== '6' && `<button class="next__button" onclick="localStorage.setItem('task1', ${+currentStep + 1}); location.reload();">
+        Дальше
+      </button>` : ''}
+      ${currentStep === '5' ? `<button class="go__button" onclick="localStorage.setItem('task1', ${+currentStep + 1}); location.reload();">
+        Поехали
+      </button>` : ''}
+      ${currentStep === '6' ? '<div class="block__text">Открой перовое задание<br> в VScode. После его выполнения <br>игра продолжится</div>' : ''}
+      <a class="next__task" id="nextTask" href="../fitness/index.html">
+        Перейти к следующему заданию
+      </a>
+    </div>`
+    )
+  </script>
 </body>
 
 </html>
