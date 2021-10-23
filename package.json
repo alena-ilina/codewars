@@ -4,12 +4,7 @@
   "description": "",
   "main": "task.js",
   "scripts": {
-    "bugs": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /bugs"
-    "tickets": "npx browser-sync start --server --watch --no-notify --cwd ./tickets --startPath /tickets",
-    "stones": "npx browser-sync start --server --watch --no-notify --cwd ./stones --startPath /stones",
-    "pizza": "npx browser-sync start --server --watch --no-notify --cwd ./pizza --startPath /pizza",
-    "fitness": "npx browser-sync start --server --watch --no-notify --cwd ./fitness --startPath /fitness",
-    "lunch": "npx browser-sync start --server --watch --no-notify --cwd ./lunch --startPath /lunch"
+    "tasks": "npx browser-sync start --server --watch --no-notify --cwd . --startPath /bugs"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"

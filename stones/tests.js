@@ -1,8 +1,8 @@
 store.testsCount = 10;
 
-  beforeEach(function() {
-    getCountWin(1,0)
-  });
+beforeEach(function () {
+  getCountWin(1, 0)
+});
 
 describe('Играем до 3 побед', () => {
   it('Первый раунд', () => {
@@ -42,5 +42,5 @@ describe('Играем до 3 побед', () => {
     }
   });
 
-  after(runnerLogic);
+  after(task4RunnerLogic);
 });

@@ -1,8 +1,8 @@
 store.testsCount = 8;
 
-  before(function () {
-    initialPrice = 1000;
-  });
+before(function () {
+  initialPrice = 1000;
+});
 
 describe('Считаем стоимость билетов', () => {
   it('Два одинаковых условия', () => {
@@ -43,5 +43,5 @@ describe('Считаем стоимость билетов', () => {
     }
   });
 
-  after(runnerLogic);
+  after(task5RunnerLogic);
 });

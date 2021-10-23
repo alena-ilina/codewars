@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>HeisenBug</title>
+  <title>Билеты</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../static/mocha.css" />
-  <link rel="stylesheet" href="../static/styles.css" />
+  <link rel="stylesheet" href="./static/styles.css" />
 </head>
 
 <body>
@@ -16,15 +16,8 @@
       successTestsCount: 0,
     };
   </script>
-  <br />
-  <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <div class="progressBar__wrapper">
-      <div class="cat _stay"></div>
-      <div class="ball"></div>
-    </div>
-    <div class="progressBar__text">
-      Котик пробежал <span id="successTestsCount">0</span>&nbsp;/&nbsp;<span id="testsCount"></span> пути
-    </div>
+  <div class="body__wrapper">
+    <div class="content" id="bodyWrapper"></div>
   </div>
   <div id="mocha"></div>
   <script src="../static/chai.js"></script>
@@ -36,20 +29,14 @@
       reporter: 'spec'
     });
   </script>
-  <script>
-    setInterval(() => {
-      location.reload();
-    }, 60000)
-  </script>
-  <script src="./task.js"></script>
-  <script src="../testRunner.js"></script>
+  <script src="./steps.js"></script>
   <script src="./tests.js"></script>
-  <script src="../setTestCount.js"></script>
+  <script src="./task.js"></script>
   <script class="mocha-exec">
     mocha.run();
   </script>
-
-
+  <script>
+  </script>
 </body>
 
 </html>

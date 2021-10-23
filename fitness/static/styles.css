@@ -14,45 +14,16 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-.task2.task_1 {
+.content {
   position: relative;
-  height: 800px;
-  background: url('./scene1.png');
   width: 800px;
-}
-
-.task2.task_2, .task2.task_4, .task2.task_6, .task2.task_8, .task2.task_9{
-  position: relative;
-  height: 362px;
-  background-color: #000;
-  width: 100%;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.task2.task_3 {
-  position: relative;
-  height: 800px;
-  background: url('./scene3.png');
-  width: 800px;
-}
-
-.task2.task_5 {
-  position: relative;
-  height: 800px;
-  background: url('./scene5.png');
-  width: 800px;
-}
-
-.task2.task_7 {
-  position: relative;
-  height: 800px;
-  background: url('./scene7.png');
-  width: 800px;
+  background-color: #CDE4F2;
 }
 
 .block__text {
@@ -62,9 +33,45 @@ html, body {
   line-height: 60px;
 }
 
-.next__button, .go__button, .next__task {
-  position: absolute;
-  width: 292px;
+.task7.task_1 {
+  position: relative;
+  height: 800px;
+  width: 800px;
+  background: url('./scene1.png');
+}
+
+.task7.task_4 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene4.png');
+}
+
+.task7.task_8 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene8.png');
+}
+
+.task7.task_9 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene9.png');
+}
+
+.task7.task_2, .task7.task_3, .task7.task_5, .task7.task_6, .task7.task_7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 362px;
+  background-color: #000;
+}
+
+.button {
   padding: 21px 0;
   border-bottom: 8px solid #CCBA4D;
   border-left: 8px solid #CCBA4D;
@@ -74,21 +81,33 @@ html, body {
   font-family: Pixel;
   color: #8C7A0A;
   font-size: 36px;
+  cursor: pointer;
 }
 
-.next__button, .next__task {
-  right: 30px;
-  bottom: 10px;
-}
-
-.go__button {
+.button._go, .button._nextTask {
+  margin-top: 40px;
+  width: 292px;
   bottom: 30px;
 }
 
-.next__task {
-  display: none;
+.next__button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #6790AA;
+  opacity: 0.5;
+  font-family: Pixel;
+  font-size: 34px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.next__task._visible {
-  display: block;
+.next__button:after {
+  content: '>';
+}
+
+.next__button._button_1, .next__button._button_4, .next__button._button_8, .next__button._button_8 {
+  color: #fff;
+  opacity: 0.5;
 }

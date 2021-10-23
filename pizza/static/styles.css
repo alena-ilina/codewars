@@ -33,28 +33,42 @@ html, body {
   line-height: 60px;
 }
 
-.task3.task_1 {
+.task6.task_1 {
   position: relative;
   height: 800px;
   width: 800px;
   background: url('./scene1.png');
 }
 
-.task3.task_4 {
+.task6.task_4 {
   position: relative;
   width: 800px;
   height: 800px;
   background: url('./scene4.png');
 }
 
-.task3.task_6 {
+.task6.task_5 {
   position: relative;
   width: 800px;
   height: 800px;
-  background: url('./scene6.png');
+  background: url('./scene5.png');
 }
 
-.task3.task_2, .task3.task_3, .task3.task_5, .task3.task_7 {
+.task6.task_8 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene8.png');
+}
+
+.task6.task_10 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene10.png');
+}
+
+.task6.task_2, .task6.task_3, .task6.task_6, .task6.task_7, .task6.task_9, .task6.task_11 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +114,7 @@ html, body {
   content: '>';
 }
 
-.next__button._button_1, .next__button._button_5, .next__button._button_7 {
+.next__button._button_1, .next__button._button_4, .next__button._button_5, .next__button._button_8 {
   color: #fff;
   opacity: 0.5;
 }

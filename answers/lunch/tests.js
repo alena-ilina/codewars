@@ -62,5 +62,5 @@ describe('Выбираем обед', () => {
     }
   });
 
-  after(runnerLogic);
+  after(task3RunnerLogic);
 });

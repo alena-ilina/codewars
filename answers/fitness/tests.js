@@ -36,5 +36,5 @@ describe('Фитнес', () => {
     }
   });
 
-  after(runnerLogic);
+  after(task7RunnerLogic);
 });

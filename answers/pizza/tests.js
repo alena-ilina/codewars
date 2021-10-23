@@ -24,5 +24,5 @@ describe('Пицца', () => {
     }
   });
 
-  after(runnerLogic);
+  after(task6RunnerLogic);
 });
