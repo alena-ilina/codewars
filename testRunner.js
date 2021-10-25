@@ -1,76 +1,76 @@
 function runnerLogic() {
-  // function calc(progressBarWidth) {
-  //   const $catNode = document.querySelector('.cat');
-  //   let k = 0;
+  function calc(progressBarWidth) {
+    const $catNode = document.querySelector('.cat');
+    let k = 0;
 
-  //   if (store.testsCount !== store.successTestsCount) {
-  //     k = $catNode.offsetWidth / 50 + store.successTestsCount * 4;
-  //   } else {
-  //     k = 100;
-  //   }
-
-  //   if (store.successTestsCount === 0) {
-  //     k = 0;
-  //   }
-
-  //   return progressBarWidth / store.testsCount * store.successTestsCount - k;
-  // }
-
-  // const $catNode = document.querySelector('.cat');
-  // const timeout = 200 * store.successTestsCount;
-  // $catNode.style.transition = `transform ${timeout}ms ease-out .3s, background .5s`
-
-  // Просто глобальный setTimeout, чтобы тесты не прям сразу запускались
-  // setTimeout(() => {
-  // const $progressBarWrapper = document.querySelector('.progressBar__wrapper');
-  const $a = document.getElementById("nextTask");
-  if (store.testsCount === store.successTestsCount) {
-    $a.classList.add('_visible')
-    $a.onclick = () => {
-      localStorage.clear()
-      $a.classList.remove('_visible')
+    if (store.testsCount !== store.successTestsCount) {
+      k = $catNode.offsetWidth / 50 + store.successTestsCount * 4;
+    } else {
+      k = 100;
     }
-    // $progressBarWrapper.classList.add('_finish');
+
+    if (store.successTestsCount === 0) {
+      k = 0;
+    }
+
+    return progressBarWidth / store.testsCount * store.successTestsCount - k;
   }
-  // const progressBarWidth = $progressBarWrapper.offsetWidth;
 
-  // Меняем счетчик анимировано
-  // let testIndex = 0;
-  // document.querySelector('#successTestsCount').innerHTML = testIndex;
+  const $catNode = document.querySelector('.cat');
+  const timeout = 200 * store.successTestsCount;
+  $catNode.style.transition = `transform ${timeout}ms ease-out .3s, background .5s`
 
-  // if (store.successTestsCount > 0) {
-  //   let intervalId = setInterval(() => {
-  //     testIndex += 1;
-  //     document.querySelector('#successTestsCount').innerHTML = testIndex;
+  //Просто глобальный setTimeout, чтобы тесты не прям сразу запускались
+  setTimeout(() => {
+    const $progressBarWrapper = document.querySelector('.progressBar__wrapper');
+    // const $a = document.getElementById("nextTask");
+    // if (store.testsCount === store.successTestsCount) {
+    //   $a.classList.add('_visible')
+    //   $a.onclick = () => {
+    //     localStorage.clear()
+    //     $a.classList.remove('_visible')
+    //   }
+    //   // $progressBarWrapper.classList.add('_finish');
+    // }
+    const progressBarWidth = $progressBarWrapper.offsetWidth;
 
-  //     if (testIndex === store.successTestsCount) {
-  //       clearInterval(intervalId);
-  //     }
-  //   }, timeout / store.successTestsCount)
-  // }
+    // Меняем счетчик анимировано
+    let testIndex = 0;
+    document.querySelector('#successTestsCount').innerHTML = testIndex;
+
+    if (store.successTestsCount > 0) {
+      let intervalId = setInterval(() => {
+        testIndex += 1;
+        document.querySelector('#successTestsCount').innerHTML = testIndex;
+
+        if (testIndex === store.successTestsCount) {
+          clearInterval(intervalId);
+        }
+      }, timeout / store.successTestsCount)
+    }
 
 
-  // $catNode.style.transform = `translateX(${calc(progressBarWidth)}px)`;
-  // $catNode.classList.remove('_stay');
-  // $catNode.classList.remove('_sad');
-  // $catNode.classList.add('_walking');
+    $catNode.style.transform = `translateX(${calc(progressBarWidth)}px)`;
+    $catNode.classList.remove('_stay');
+    $catNode.classList.remove('_sad');
+    $catNode.classList.add('_walking');
 
-  // setTimeout(() => {
-  //   $catNode.classList.remove('_walking');
+    setTimeout(() => {
+      $catNode.classList.remove('_walking');
 
-  //   if (store.testsCount === store.successTestsCount) {
-  //     $catNode.classList.add('_finish');
-  //   } else {
-  //     $catNode.classList.add('_sad');
-  //   }
-  // }, timeout);
+      if (store.testsCount === store.successTestsCount) {
+        $catNode.classList.add('_finish');
+      } else {
+        $catNode.classList.add('_sad');
+      }
+    }, timeout);
 
-  // setTimeout(() => {
-  //   if (store.testsCount === store.successTestsCount) {
-  //     $a.classList.add('_visible')
-  //     $progressBarWrapper.classList.add('_finish');
-  //   }
-  // }, timeout - 500)
+    setTimeout(() => {
+      if (store.testsCount === store.successTestsCount) {
+        $a.classList.add('_visible')
+        $progressBarWrapper.classList.add('_finish');
+      }
+    }, timeout - 500)
 
-  // }, 500)
+  }, 500)
 }
