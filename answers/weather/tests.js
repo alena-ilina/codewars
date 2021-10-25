@@ -8,7 +8,7 @@ var finalTemperature = 0
 
 describe('Посчитать на какую температуру ощущается погода', () => {
     it('Входная температура меньше -100"', () => {
-        reason = {"degrees":-100,
+        reason = {"degrees":-101,
             "wet":0,
             "wind":0,
             "cloudy":0}
@@ -43,7 +43,8 @@ describe('Посчитать на какую температуру ощущае
       it('Вх. темп. = 15, остальные параметры 0', () => {
         reason = {"degrees":15,
             "wet":0,
-            "wind":0}
+            "wind":0,
+            "cloudy":0}
         chai.expect(getFeelingTheeWeather(reason)).to.equal('Ощущается как 18') 
 
       });

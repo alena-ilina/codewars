@@ -5,11 +5,11 @@ reason = {"degrees":0,
 var finalTemperature = 0
 
 function getFeelingTheeWeather(reason){
-    if(reason["degrees"] <= -100){
+    if(reason["degrees"] < -100){
         return("В такую погоду люди дома сидят, телевизор смотрят.")
     }
 
-    if(70<= reason["degrees"]){
+    if(70 <= reason["degrees"]){
         return("Слишком жарко, и ощущается так же.")
     }
 
