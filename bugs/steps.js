@@ -32,14 +32,16 @@ function task2RunnerLogic() {
   const step4Elements = '<div class="block__text">хмммм...</div>'
   const step6Elements = '<div class="block__text">Эх, если бы только<br> люди умели писать<br>код без багов</div>'
   const step8Elements = '<div class="block__text">Существует ли способ<br> заранее оценить сколько<br>багов допустят<br>разработчики?</div>'
+  const step9Elements = '<div class="block__text">Выполни<br>задание в<br>папке bugs</div>'
   const step10Elements = '<div class="block__text">Готовы перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '4') { content = step4Elements; }
   if (bugsCurrentStep === '6') { content = step6Elements; }
   if (bugsCurrentStep === '8') { content = step8Elements; button = goTaskButton }
+  if (bugsCurrentStep === '9') { content = step9Elements }
   if (bugsCurrentStep === '10') { button = nextTaskButton; content = step10Elements; }
-  if (bugsCurrentStep !== '8' && bugsCurrentStep !== '9' && bugsCurrentStep !== '10') { button = nextButton }
+  if (bugsCurrentStep !== 'intro' && bugsCurrentStep !== '8' && bugsCurrentStep !== '9' && bugsCurrentStep !== '10') { button = nextButton }
 
   $bodyWrapperNode.insertAdjacentHTML('afterbegin',
     `<div class="task2 task_${bugsCurrentStep}">

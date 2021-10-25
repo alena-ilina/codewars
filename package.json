@@ -4,7 +4,7 @@
   "description": "",
   "main": "task.js",
   "scripts": {
-    "tasks": "npx browser-sync start --server --watch --no-notify --cwd . --startPath /bugs"
+    "tasks": "npx browser-sync start --server --watch --no-notify --cwd . --startPath /weather"
   },
   "dependencies": {
     "browser-sync": "^2.26.14"

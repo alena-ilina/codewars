@@ -48,23 +48,22 @@ describe('Количество костылей и багов за кварта�
       "teamLead": 1,
       "juniorFrontend": 0,
       "middleFrontend": 0,
-      "seniorFrontend": 0
     }
     chai.expect(getBugsANDCrutchs(team)).to.equal('Ошибка, необходим frontend - разработчик')
   });
 
   it('Проверить алерт на отсутствие тимлида"', () => {
-    team = {
+    myTeam = {
       "trainee": 0,
       "juniorBackend": 2,
       "middleBackend": 0,
       "seniorBackend": 0,
-      "teamLead": 0,
+      "teemLead": 0,
       "juniorFrontend": 0,
       "middleFrontend": 1,
       "seniorFrontend": 0
     }
-    chai.expect(getBugsANDCrutchs(team)).to.equal('Ошибка, необходим teamlead')
+    chai.expect(getBugsANDCrutchs(mineTeam)).to.equal('Ошибка, необходим teamlead')
   });
 
   it('Проверить расчет с минимальным количеством участников"', () => {

@@ -1,6 +1,6 @@
 @font-face {
   font-family: Pixel; /* Имя шрифта */
-  src: url('../../static/pixel.woff'); /* Путь к файлу со шрифтом */
+  src: url('../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
 }
 
 html, body {
@@ -68,7 +68,7 @@ html, body {
   background: url('./scene9.png');
 }
 
-.task2.task_2, .task2.task_4, .task2.task_6, .task2.task_8, .task2.task_10 {
+.task2.task_intro, .task2.task_2, .task2.task_4, .task2.task_6, .task2.task_8, .task2.task_10 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,12 +78,24 @@ html, body {
   background-color: #000;
 }
 
-.task2.task_8 {
+.task2.task_8, .task2.task_intro {
   height: 472px;
 }
 
+.task2.task_9 {
+  position: relative;
+}
+
+.task2.task_9 .block__text{
+  position: absolute;
+  top: 409px;
+  left: 315px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
 .button {
-  padding: 21px 0;
+  padding: 21px 20px;
   border-bottom: 8px solid #CCBA4D;
   border-left: 8px solid #CCBA4D;
   border-right: 8px solid #CCBA4D;
@@ -97,14 +109,13 @@ html, body {
 
 .button._go, .button._nextTask {
   margin-top: 40px;
-  width: 292px;
   bottom: 30px;
 }
 
 .next__button {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 4px;
+  right: 2px;
   color: #6790AA;
   opacity: 0.5;
   font-family: Pixel;
@@ -120,5 +131,5 @@ html, body {
 
 .next__button._button_3, .next__button._button_5, .next__button._button_7 {
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.6;
 }
