@@ -29,10 +29,12 @@ function task4RunnerLogic() {
 
   const step2Elements = '<div class="block__text">после обеда нужно<br>немного расслабиться</div>'
   const step3Elements = '<div class="block__text">поиграю с коллегами<br>в камень, ножницы,<br>бумага, ящерица, спок!</div>'
+  const step4Elements = '<div class="block__text">Выполни<br>задание в<br>папке stones</div>'
   const step5Elements = '<div class="block__text">Готовы перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '3') { content = step3Elements; button = goTaskButton }
+  if (bugsCurrentStep === '4') { content = step4Elements; }
   if (bugsCurrentStep === '5') { button = nextTaskButton; content = step5Elements; }
   if (bugsCurrentStep !== '3' && bugsCurrentStep !== '4' && bugsCurrentStep !== '5') { button = nextButton }
 
