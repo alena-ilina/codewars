@@ -30,11 +30,13 @@ function task3RunnerLogic() {
   const step2Elements = '<div class="block__text">поработали<br>—<br>можно и поесть!</div>'
   const step3Elements = '<div class="block__text">интересно, сколько каллорий<br>я могу себе позволить?</div>'
   const step5Elements = '<div class="block__text">надо посчитать</div>'
+  const step6Elements = '<div class="block__text">Выполни<br>задание в<br>папке lunch</div>'
   const step7Elements = '<div class="block__text">Готовы перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '3') { content = step3Elements; }
   if (bugsCurrentStep === '5') { content = step5Elements; button = goTaskButton }
+  if (bugsCurrentStep === '6') { content = step6Elements; }
   if (bugsCurrentStep === '7') { button = nextTaskButton; content = step7Elements; }
   if (bugsCurrentStep !== '5' && bugsCurrentStep !== '6' && bugsCurrentStep !== '7') { button = nextButton }
 
