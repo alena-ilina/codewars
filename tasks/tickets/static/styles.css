@@ -1,6 +1,6 @@
 @font-face {
   font-family: Pixel; /* Имя шрифта */
-  src: url('../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
+  src: url('../../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
 }
 
 html, body {
@@ -33,42 +33,56 @@ html, body {
   line-height: 60px;
 }
 
-.task2.task_1 {
+.task5.task_1 {
   position: relative;
   height: 800px;
   width: 800px;
   background: url('./scene1.png');
 }
 
-.task2.task_3 {
+.task5.task_3 {
   position: relative;
   width: 800px;
   height: 800px;
   background: url('./scene3.png');
 }
 
-.task2.task_5 {
+.task5.task_4 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene4.png');
+}
+
+.task5.task_5 {
   position: relative;
   width: 800px;
   height: 800px;
   background: url('./scene5.png');
 }
 
-.task2.task_7 {
+.task5.task_7 {
   position: relative;
   width: 800px;
   height: 800px;
   background: url('./scene7.png');
 }
 
-.task2.task_9 {
+.task5.task_8 {
   position: relative;
   width: 800px;
   height: 800px;
-  background: url('./scene9.png');
+  background: url('./scene8.png');
 }
 
-.task2.task_intro, .task2.task_2, .task2.task_4, .task2.task_6, .task2.task_8, .task2.task_10 {
+.task5.task_12 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene12.png');
+}
+
+.task5.task_2, .task5.task_6, .task5.task_9, .task5.task_10, .task5.task_11, .task5.task_13 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,24 +92,24 @@ html, body {
   background-color: #000;
 }
 
-.task2.task_8, .task2.task_intro {
+.task5.task_11 {
   height: 472px;
 }
 
-.task2.task_9 {
+.task5.task_12 {
   position: relative;
 }
 
-.task2.task_9 .block__text{
+.task5.task_12 .block__text{
   position: absolute;
   top: 409px;
-  left: 315px;
+  left: 301px;
   font-size: 32px;
   line-height: 40px;
 }
 
 .button {
-  padding: 21px 20px;
+  padding: 21px 0;
   border-bottom: 8px solid #CCBA4D;
   border-left: 8px solid #CCBA4D;
   border-right: 8px solid #CCBA4D;
@@ -109,13 +123,14 @@ html, body {
 
 .button._go, .button._nextTask {
   margin-top: 40px;
+  width: 292px;
   bottom: 30px;
 }
 
 .next__button {
   position: absolute;
   bottom: 4px;
-  right: 2px;
+  right: 25px;
   color: #6790AA;
   opacity: 0.5;
   font-family: Pixel;
@@ -129,7 +144,7 @@ html, body {
   content: '>';
 }
 
-.next__button._button_3, .next__button._button_5, .next__button._button_7 {
+.next__button._button_1, .next__button._button_3, .next__button._button_4, .next__button._button_5, .next__button._button_7, .next__button._button_8 {
   color: #fff;
   opacity: 0.6;
 }

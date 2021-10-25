@@ -1,6 +1,6 @@
 @font-face {
   font-family: Pixel; /* Имя шрифта */
-  src: url('../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
+  src: url('../../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
 }
 
 html, body {
@@ -33,56 +33,28 @@ html, body {
   line-height: 60px;
 }
 
-.task5.task_1 {
+.task3.task_1 {
   position: relative;
   height: 800px;
   width: 800px;
   background: url('./scene1.png');
 }
 
-.task5.task_3 {
-  position: relative;
-  width: 800px;
-  height: 800px;
-  background: url('./scene3.png');
-}
-
-.task5.task_4 {
+.task3.task_4 {
   position: relative;
   width: 800px;
   height: 800px;
   background: url('./scene4.png');
 }
 
-.task5.task_5 {
+.task3.task_6 {
   position: relative;
   width: 800px;
   height: 800px;
-  background: url('./scene5.png');
+  background: url('./scene6.png');
 }
 
-.task5.task_7 {
-  position: relative;
-  width: 800px;
-  height: 800px;
-  background: url('./scene7.png');
-}
-
-.task5.task_8 {
-  position: relative;
-  width: 800px;
-  height: 800px;
-  background: url('./scene8.png');
-}
-
-.task5.task_12 {
-  position: relative;
-  width: 800px;
-  height: 800px;
-  background: url('./scene12.png');
-}
-
-.task5.task_2, .task5.task_6, .task5.task_9, .task5.task_10, .task5.task_11, .task5.task_13 {
+.task3.task_2, .task3.task_3, .task3.task_5, .task3.task_7 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,18 +64,14 @@ html, body {
   background-color: #000;
 }
 
-.task5.task_11 {
-  height: 472px;
-}
-
-.task5.task_12 {
+.task3.task_6 {
   position: relative;
 }
 
-.task5.task_12 .block__text{
+.task3.task_6 .block__text{
   position: absolute;
   top: 409px;
-  left: 301px;
+  left: 315px;
   font-size: 32px;
   line-height: 40px;
 }
@@ -144,7 +112,7 @@ html, body {
   content: '>';
 }
 
-.next__button._button_1, .next__button._button_3, .next__button._button_4, .next__button._button_5, .next__button._button_7, .next__button._button_8 {
+.next__button._button_1, .next__button._button_5, .next__button._button_7 {
   color: #fff;
   opacity: 0.6;
 }

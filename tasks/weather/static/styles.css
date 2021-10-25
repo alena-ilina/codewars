@@ -1,6 +1,6 @@
 @font-face {
   font-family: Pixel; /* Имя шрифта */
-  src: url('../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
+  src: url('../../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
 }
 
 html, body {

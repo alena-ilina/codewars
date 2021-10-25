@@ -1,6 +1,6 @@
 @font-face {
   font-family: Pixel; /* Имя шрифта */
-  src: url('../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
+  src: url('../../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
 }
 
 html, body {
@@ -33,28 +33,35 @@ html, body {
   line-height: 60px;
 }
 
-.task3.task_1 {
+.task7.task_1 {
   position: relative;
   height: 800px;
   width: 800px;
   background: url('./scene1.png');
 }
 
-.task3.task_4 {
+.task7.task_4 {
   position: relative;
   width: 800px;
   height: 800px;
   background: url('./scene4.png');
 }
 
-.task3.task_6 {
+.task7.task_8 {
   position: relative;
   width: 800px;
   height: 800px;
-  background: url('./scene6.png');
+  background: url('./scene8.png');
 }
 
-.task3.task_2, .task3.task_3, .task3.task_5, .task3.task_7 {
+.task7.task_9 {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: url('./scene9.png');
+}
+
+.task7.task_2, .task7.task_3, .task7.task_5, .task7.task_6, .task7.task_7 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,14 +71,14 @@ html, body {
   background-color: #000;
 }
 
-.task3.task_6 {
+.task7.task_8 {
   position: relative;
 }
 
-.task3.task_6 .block__text{
+.task7.task_8 .block__text{
   position: absolute;
   top: 409px;
-  left: 315px;
+  left: 299px;
   font-size: 32px;
   line-height: 40px;
 }
@@ -112,7 +119,7 @@ html, body {
   content: '>';
 }
 
-.next__button._button_1, .next__button._button_5, .next__button._button_7 {
+.next__button._button_1, .next__button._button_4, .next__button._button_8, .next__button._button_8 {
   color: #fff;
   opacity: 0.6;
 }

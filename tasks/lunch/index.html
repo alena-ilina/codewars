@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Билеты</title>
+  <title>Обед</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../static/mocha.css" />
+  <link rel="stylesheet" href="../../static/mocha.css" />
   <link rel="stylesheet" href="./static/styles.css" />
 </head>
 
@@ -20,8 +20,8 @@
     <div class="content" id="bodyWrapper"></div>
   </div>
   <div id="mocha"></div>
-  <script src="../static/chai.js"></script>
-  <script src="../static/mocha.js"></script>
+  <script src="../../static/chai.js"></script>
+  <script src="../../static/mocha.js"></script>
 
   <script class="mocha-init">
     mocha.setup({
@@ -29,9 +29,9 @@
       reporter: 'spec'
     });
   </script>
-  <script src="./steps.js"></script>
+  <script src="./static/steps.js"></script>
   <script src="./tests.js"></script>
-  <script src="./task.js"></script>
+  <script src="./static/task.js"></script>
   <script class="mocha-exec">
     mocha.run();
   </script>
