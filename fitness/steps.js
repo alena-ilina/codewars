@@ -33,12 +33,14 @@ function task7RunnerLogic() {
   const step5Elements = '<div class="block__text">но надо<br>не переусердствовать<br>с нагрузкой</div>'
   const step6Elements = '<div class="block__text">какие упражнения<br>помогут мне отработать<br>пиццу? а обед?<br> а завтрак?</div>'
   const step7Elements = '<div class="block__text">кажется, без подсчетов<br>не обойтись</div>'
+  const step8Elements = '<div class="block__text">Выполни<br>задание в<br>папке fitness</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '3') { content = step3Elements; }
   if (bugsCurrentStep === '5') { content = step5Elements; }
   if (bugsCurrentStep === '6') { content = step6Elements; }
   if (bugsCurrentStep === '7') { content = step7Elements; button = goTaskButton }
+  if (bugsCurrentStep === '8') { content = step8Elements; }
   if (bugsCurrentStep !== '7' && bugsCurrentStep !== '8' && bugsCurrentStep !== '9') { button = nextButton }
 
   $bodyWrapperNode.insertAdjacentHTML('afterbegin',

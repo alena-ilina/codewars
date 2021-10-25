@@ -1,6 +1,6 @@
 @font-face {
   font-family: Pixel; /* Имя шрифта */
-  src: url('../../static/pixel.woff'); /* Путь к файлу со шрифтом */
+  src: url('../../static/pixelcyr.ttf'); /* Путь к файлу со шрифтом */
 }
 
 html, body {
@@ -71,6 +71,18 @@ html, body {
   background-color: #000;
 }
 
+.task7.task_8 {
+  position: relative;
+}
+
+.task7.task_8 .block__text{
+  position: absolute;
+  top: 409px;
+  left: 299px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
 .button {
   padding: 21px 0;
   border-bottom: 8px solid #CCBA4D;
@@ -92,8 +104,8 @@ html, body {
 
 .next__button {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 4px;
+  right: 25px;
   color: #6790AA;
   opacity: 0.5;
   font-family: Pixel;
@@ -109,5 +121,5 @@ html, body {
 
 .next__button._button_1, .next__button._button_4, .next__button._button_8, .next__button._button_8 {
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.6;
 }

@@ -33,6 +33,7 @@ function task6RunnerLogic() {
   const step6Elements = '<div class="block__text">Совсем забыл! у нашего<br> тимлида день рождения!</div>'
   const step7Elements = '<div class="block__text">И я обещал помочь ему<br>с заказом пиццы на всех</div>'
   const step9Elements = '<div class="block__text">сколько нужно пицц<br>на команду?</div>'
+  const step10Elements = '<div class="block__text">Выполни<br>задание в<br>папке pizza</div>'
   const step11Elements = '<div class="block__text">впереди последнее задание,<br>готовы показать класс?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
@@ -40,6 +41,7 @@ function task6RunnerLogic() {
   if (bugsCurrentStep === '6') { content = step6Elements; }
   if (bugsCurrentStep === '7') { content = step7Elements; }
   if (bugsCurrentStep === '9') { content = step9Elements; button = goTaskButton }
+  if (bugsCurrentStep === '10') { content = step10Elements; }
   if (bugsCurrentStep === '11') { button = nextTaskButton; content = step11Elements; }
   if (bugsCurrentStep !== '9' && bugsCurrentStep !== '10' && bugsCurrentStep !== '11') { button = nextButton }
 
