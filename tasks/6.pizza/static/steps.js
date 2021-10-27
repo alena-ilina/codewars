@@ -19,6 +19,8 @@ function task6RunnerLogic() {
 
   const bugsCurrentStep = localStorage.getItem("task6")
 
+  setTimer()
+
   const $bodyWrapperNode = document.getElementById("bodyWrapper");
 
   let content = ''

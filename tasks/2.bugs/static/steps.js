@@ -19,6 +19,8 @@ function task2RunnerLogic() {
 
   const bugsCurrentStep = localStorage.getItem("task2")
 
+  setTimer()
+
   const $bodyWrapperNode = document.getElementById("bodyWrapper");
 
   let content = ''
