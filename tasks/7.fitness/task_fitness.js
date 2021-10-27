@@ -1,4 +1,4 @@
-store.testsCount = 7;
+store.testsCount = 3;
 
 describe('Фитнес', () => {
   // Изучи код в файле task.js.
