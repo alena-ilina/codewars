@@ -34,7 +34,7 @@ function task6RunnerLogic() {
   const step7Elements = '<div class="block__text">И я обещал помочь ему<br>с заказом пиццы на всех</div>'
   const step9Elements = '<div class="block__text">сколько нужно пицц<br>на команду?</div>'
   const step10Elements = '<div class="block__text">Выполни<br>задание в<br>папке pizza</div>'
-  const step11Elements = '<div class="block__text">впереди последнее задание,<br>готовы показать класс?</div>'
+  const step11Elements = '<div class="block__text">впереди последнее задание,<br>готов показать класс?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '3') { content = step3Elements; }

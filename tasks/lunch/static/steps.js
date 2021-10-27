@@ -28,10 +28,10 @@ function task3RunnerLogic() {
   const nextTaskButton = `<a class="button _nextTask" id="nextTask" href="../stones/index.html" onclick"localStorage.clear()">Погнали!</a>`
 
   const step2Elements = '<div class="block__text">поработали<br>—<br>можно и поесть!</div>'
-  const step3Elements = '<div class="block__text">интересно, сколько каллорий<br>я могу себе позволить?</div>'
+  const step3Elements = '<div class="block__text">интересно, сколько калорий<br>я могу себе позволить?</div>'
   const step5Elements = '<div class="block__text">надо посчитать</div>'
   const step6Elements = '<div class="block__text">Выполни<br>задание в<br>папке lunch</div>'
-  const step7Elements = '<div class="block__text">Готовы перейти<br>к следующему заданию?</div>'
+  const step7Elements = '<div class="block__text">Готов перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '3') { content = step3Elements; }

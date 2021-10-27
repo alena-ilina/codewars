@@ -34,7 +34,7 @@ function task5RunnerLogic() {
   const step10Elements = '<div class="block__text">интересно, а как это<br>влияет на стоимость<br>билетов?</div>'
   const step11Elements = '<div class="block__text">а что еще влияет?<br>и на сколько дороже<br>может стать командировка?</div>'
   const step12Elements = '<div class="block__text">Выполни<br>задание в<br>папке tickets</div>'
-  const step13Elements = '<div class="block__text">готовы перейти<br>к следующему заданию?</div>'
+  const step13Elements = '<div class="block__text">готов перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '6') { content = step6Elements; }

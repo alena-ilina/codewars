@@ -31,9 +31,9 @@ function task2RunnerLogic() {
   const step2Elements = '<div class="block__text">ухх, как же я замерз<br>нужен горячий кофе<br>и пофиксить пару багов<br>это меня разогреет!</div>'
   const step4Elements = '<div class="block__text">хмммм...</div>'
   const step6Elements = '<div class="block__text">Эх, если бы только<br> люди умели писать<br>код без багов</div>'
-  const step8Elements = '<div class="block__text">Существует ли способ<br> заранее оценить сколько<br>багов допустят<br>разработчики?</div>'
+  const step8Elements = '<div class="block__text">Существует ли способ<br> заранее оценить, сколько<br>багов допустят<br>разработчики?</div>'
   const step9Elements = '<div class="block__text">Выполни<br>задание в<br>папке bugs</div>'
-  const step10Elements = '<div class="block__text">Готовы перейти<br>к следующему заданию?</div>'
+  const step10Elements = '<div class="block__text">Готов перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === '2') { content = step2Elements; }
   if (bugsCurrentStep === '4') { content = step4Elements; }

@@ -60,7 +60,7 @@ function onStartButtonClick() {
   const step4Elements = '<div class="block__text">Что же мне надеть?<br>Люди одеты так по-разному</div>'
   const step5Elements = '<div class="block__text">Посмотрю погоду<br> и выберу подходящий наряд<br>там же есть "Ощущается как"</div>'
   const step6Elements = '<div class="block__text">Выполни<br>задание в<br>папке weather</div>'
-  const step7Elements = '<div class="block__text">Готовы перейти<br>к следующему заданию?</div>'
+  const step7Elements = '<div class="block__text">Готов перейти<br>к следующему заданию?</div>'
 
   if (bugsCurrentStep === 'intro') { content = intro; button = startButton }
   if (bugsCurrentStep === '3') { content = step3Elements; }
