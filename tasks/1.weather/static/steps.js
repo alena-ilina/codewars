@@ -48,7 +48,7 @@ function onStartButtonClick() {
 
   const nextButton = `<button class="button next__button _button_${bugsCurrentStep}" onclick="localStorage.setItem('task1', ${+bugsCurrentStep + 1}); location.reload();"> Вперед </button>`
   const goTaskButton = `<button class="button _go" onclick="localStorage.setItem('task1', ${+bugsCurrentStep + 1}); location.reload();">Поехали</button>`
-  const nextTaskButton = `<a class="button _nextTask" id="nextTask" href="../bugs/index.html" onclick"localStorage.clear()"> Конечно!</a>`
+  const nextTaskButton = `<a class="button _nextTask" id="nextTask" href="../2.bugs/index.html" onclick"localStorage.clear()"> Конечно!</a>`
 
   const startButton = `<button class="button _go" onclick="onStartButtonClick()">Поооогналии!!!</button>`
   const intro = `

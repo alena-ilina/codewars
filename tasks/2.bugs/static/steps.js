@@ -26,7 +26,7 @@ function task2RunnerLogic() {
 
   const nextButton = `<button class="button next__button _button_${bugsCurrentStep}" onclick="localStorage.setItem('task2', ${+bugsCurrentStep + 1}); location.reload();"> Вперед </button>`
   const goTaskButton = `<button class="button _go" onclick="localStorage.setItem('task2', ${+bugsCurrentStep + 1}); location.reload();">Поехали</button>`
-  const nextTaskButton = `<a class="button _nextTask" id="nextTask" href="../lunch/index.html" onclick"localStorage.clear()"> А то!</a>`
+  const nextTaskButton = `<a class="button _nextTask" id="nextTask" href="../3.lunch/index.html" onclick"localStorage.clear()"> А то!</a>`
 
   const step2Elements = '<div class="block__text">ухх, как же я замерз<br>нужен горячий кофе<br>и пофиксить пару багов<br>это меня разогреет!</div>'
   const step4Elements = '<div class="block__text">хмммм...</div>'
