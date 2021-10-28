@@ -18,6 +18,7 @@ function task4RunnerLogic() {
   if (!localStorage.getItem("task4")) localStorage.setItem('task4', 1)
 
   const bugsCurrentStep = localStorage.getItem("task4")
+  setTimer()
 
   const $bodyWrapperNode = document.getElementById("bodyWrapper");
   let content = ''

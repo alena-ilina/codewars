@@ -22,6 +22,8 @@ function task7RunnerLogic() {
 
   const $bodyWrapperNode = document.getElementById("bodyWrapper");
 
+  setTimer()
+
   let content = ''
   let button = ''
 

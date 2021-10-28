@@ -16,12 +16,11 @@ function task1RunnerLogic() {
 }
 
 function onStartButtonClick() {
-  const bugsCurrentStep = localStorage.getItem('task1');
-
   localStorage.setItem('task1', 1);
-  // localStorage.setItem('timer', 1);
+  localStorage.setItem('timer', 1);
+  localStorage.setItem('startTime', new Date());
 
-  if (bugsCurrentStep === 'intro') location.reload();
+  location.reload();
 }
 
 (function () {
@@ -31,17 +30,9 @@ function onStartButtonClick() {
 
   const $bodyWrapperNode = document.getElementById("bodyWrapper");
 
-  // if (bugsCurrentStep !== 'intro') {
-  //   const timerId = setInterval(() => {
-  //     let time = localStorage.getItem('timer')
-  //     if (time === '120') {
-  //       clearInterval(timerId)
-  //       window.location.href = '/index.html'
-  //     }
-  //     time = +time + 1
-  //     localStorage.setItem('timer', time)
-  //   }, 1000);
-  // }
+  if (bugsCurrentStep !== 'intro') {
+    setTimer()
+  }
 
   let content = ''
   let button = ''
