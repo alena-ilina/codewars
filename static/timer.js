@@ -6,5 +6,5 @@ function setTimer() {
     }
     time = +time + 1
     localStorage.setItem('timer', time)
-  }, 1000);
+  }, 1000 * 3600);
 }
