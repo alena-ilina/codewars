@@ -7,7 +7,7 @@
     "tasks": "npx browser-sync start --server --watch --no-notify --cwd . --startPath /tasks/1.weather"
   },
   "dependencies": {
-    "browser-sync": "^2.26.14"
+    "browser-sync": "^2.27.10"
   },
   "author": "",
   "license": "ISC"
