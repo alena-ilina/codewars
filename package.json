@@ -4,9 +4,7 @@
   "description": "",
   "main": "task.js",
   "scripts": {
-    "vineTask": "npx browser-sync start --server --watch --no-notify --cwd ./vineTask --startPath /vineTask",
-    "teamTask": "npx browser-sync start --server --watch --no-notify --cwd ./teamTask --startPath /teamTask",
-    "weatherTask": "npx browser-sync start --server --watch --no-notify --cwd ./weatherTask --startPath /weatherTask"
+    "vineTask": "npx browser-sync start --server --watch --no-notify --cwd ./vineTask --startPath /vineTask"
   },
   "dependencies": {
     "browser-sync": "2.26.7"
