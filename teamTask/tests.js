@@ -35,8 +35,8 @@ describe('Количество костылей и багов за кварта�
   it('Проверить алерт на количество фронтендеров', () => {
     team = {
       "trainee": 0,
-      "juniorBackend": 2,
-      "middleBackend": 0,
+      "juniorBackend": 0,
+      "middleBackend": 2,
       "seniorBackend": 0,
       "teamLead": 1,
       "juniorFrontend": 0,
@@ -49,9 +49,9 @@ describe('Количество костылей и багов за кварта�
   it('Проверить алерт на отсутствие тимлида', () => {
     team = {
       "trainee": 0,
-      "juniorBackend": 2,
+      "juniorBackend": 0,
       "middleBackend": 0,
-      "seniorBackend": 0,
+      "seniorBackend": 2,
       "teamLead": 0,
       "juniorFrontend": 0,
       "middleFrontend": 1,
@@ -63,15 +63,15 @@ describe('Количество костылей и багов за кварта�
   it('Проверить расчет с минимальным количеством участников', () => {
     team = {
       "trainee": 0,
-      "juniorBackend": 0,
-      "middleBackend": 1,
-      "seniorBackend": 1,
+      "juniorBackend": 2,
+      "middleBackend": 0,
+      "seniorBackend": 0,
       "teamLead": 1,
       "juniorFrontend": 1,
       "middleFrontend": 0,
       "seniorFrontend": 0
     }
-    chai.expect(getBugsANDCrutchs(team)).to.equal('Итого: 16 багов, 24 костылей за квартал')
+    chai.expect(getBugsANDCrutchs(team)).to.equal('Итого: 25 багов, 18 костылей за квартал')
   });
 
   it('Проверить , что если есть тестировщик - значит нет багов', () => {
@@ -103,17 +103,17 @@ describe('Количество костылей и багов за кварта�
 
     let notDreamTeam = {
       "trainee": 0,
-      "juniorBackend": 10,
-      "middleBackend": 0,
+      "juniorBackend": 0,
+      "middleBackend": 10,
       "seniorBackend": 0,
       "teamLead": 1,
       "juniorFrontend": 10,
       "middleFrontend": 0,
       "seniorFrontend": 0
     };
-
-    chai.expect(getBugsANDCrutchs(dreamTeam).substring(0,10).replace(/[^0-9, ]/g,"") > 
-      getBugsANDCrutchs(notDreamTeam).substring(0,10).replace(/[^0-9, ]/g,"")).to.be.true;
+    chai.expect(getBugsANDCrutchs(dreamTeam).substring(0,10).replace(/[^0-9, ]/g,"") <
+    getBugsANDCrutchs(notDreamTeam).substring(0,10).replace(/[^0-9, ]/g,"")
+    ).to.be.true;
   });
 
   afterEach(function () {

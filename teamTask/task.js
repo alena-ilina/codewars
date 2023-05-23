@@ -17,25 +17,27 @@ let team = {
 let employee = ""
 let bugs = 0
 let сrutchs = 0
+let teamEmployeeCount = 0;
+let teamSpiritCoeff = 0.9
 
 function getBugsANDCrutchs(team) {
   if ((team["juniorBackend"] + team["middleBackend"] + team["seniorBackend"]) < 2) {
-    return "Ошибка, необходимо два backend-разработчика"
-  }
+    return "Ошибка, необходимо два beckend-разработчика"
+  } 
 
-  if ((team["juniorFrontend"] + team["middleFrontend"] + team["seniorFrontend"]) < 1) {
+  if ((team["juniorFrontend"] + team["middleFrontend"] + team["seniorFrontend"]) < 0) {
     return "Ошибка, необходим frontend - разработчик"
-  }
-
-  if (team["teamLead"] === 0) {
-    return "Ошибка, необходим teamlead"
+    
   }
 
   if (team["QA"] > 0) {
-    return "Никаких багов и костылей! Не в мою смену!"
+    return "Никаких багов и коcтылей! Не в мою смену!"
   }
 
   for (let employee in team) {
+    if (team[employee] > 0) {
+      teamEmployeeCount++;
+    }
     if (employee === "trainee") {
       bugs = bugs + team[employee] * 1 * 3;
       сrutchs = сrutchs + team[employee] * 0 * 3;
@@ -44,6 +46,8 @@ function getBugsANDCrutchs(team) {
     if (employee === "juniorBackend") {
       bugs = bugs + team[employee] * 3 * 3;
       сrutchs = сrutchs + team[employee] * 1 * 3;
+      if (team[employee] >= 2)
+        return 'Астрологи предсказали квартал багов, количество багов увеличилось втрое!'
     };
     if (employee === "middleBackend") {
       bugs = bugs + team[employee] * 2 * 3;
@@ -70,7 +74,15 @@ function getBugsANDCrutchs(team) {
       сrutchs = сrutchs + team[employee] * 0 * 3;
     };
   }
+
+  if ((teamEmployeeCount >=8)) {
+    bugs = bugs * teamSpiritCoeff;
+  }
+
+  if (bugs > 60) throw new Error('Чёт поплохело от такого количества багов, простите');
+
   const result = `Итого: ${bugs} багов, ${сrutchs} костылей за квартал`
+  teamEmployeeCount = 0
   bugs = 0
   сrutchs = 0
   return result
