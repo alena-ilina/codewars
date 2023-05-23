@@ -111,8 +111,8 @@ describe('Количество костылей и багов за кварта�
       "middleFrontend": 0,
       "seniorFrontend": 0
     };
-    chai.expect(getBugsANDCrutchs(dreamTeam).substring(0,10).replace(/[^0-9, ]/g,"") <
-    getBugsANDCrutchs(notDreamTeam).substring(0,10).replace(/[^0-9, ]/g,"")
+    chai.expect(Number(getBugsANDCrutchs(dreamTeam).substring(0,10).replace(/[^0-9, ]/g,"")) <
+    Number(getBugsANDCrutchs(notDreamTeam).substring(0,10).replace(/[^0-9, ]/g,""))
     ).to.be.true;
   });
 
