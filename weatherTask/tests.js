@@ -11,7 +11,7 @@ reason = {
 finalTemperature = 0
 
 describe('Посчитать на какую температуру ощущается погода', () => {
-  it('Входная температура меньше -100"', () => {
+  it('Входная температура -100"', () => {
     reason = {
       "degrees": -100,
       "wet": 0,
@@ -62,14 +62,15 @@ describe('Посчитать на какую температуру ощущае
 
   });
 
-  it('Все параметры = 0', () => {
+  it('Сегодня - выходной', () => {
     reason = {
       "degrees": 0,
       "wet": 0,
       "wind": 0,
-      "cloudy": 0
+      "cloudy": 0,
+      "isWeekend": true
     }
-    chai.expect(getFeelingTheeWeather(reason)).to.equal('Ощущается как 3')
+    chai.expect(getFeelingTheeWeather(reason)).to.equal('Сегодня выходной, какая разница, какая погода? Лучше отоспись!')
 
   });
 
