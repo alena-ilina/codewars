@@ -17,7 +17,7 @@ let team = {
 let employee = ""
 let bugs = 0
 let сrutchs = 0
-let teamEmployeeCount = 0;
+let teamEmployeeCount = 0
 let teamSpiritCoeff = 0.9
 
 function getBugsANDCrutchs(team) {
@@ -75,7 +75,7 @@ function getBugsANDCrutchs(team) {
     };
   }
 
-  if ((teamEmployeeCount >=8)) {
+  if ((teamEmployeeCount >= 8)) {
     bugs = bugs * teamSpiritCoeff;
   }
 
