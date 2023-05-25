@@ -19,7 +19,7 @@ function getFeelingTheeWeather(reason){
     }
 
     if(70 <= reason["degrees"]){
-        return("Cлишком жарко, и ощущается также.")
+        return("Слишком жарко, и ощущается так же.")
     }
 
     finalTemperature = reason["degrees"];
@@ -31,7 +31,7 @@ function getFeelingTheeWeather(reason){
         if(reason["wet"] <= 69 && reason["wet"] >= 50)
         { finalTemperature =  finalTеmperature - 1}
         if(reason["wet"] <= 100 && reason["wet"] >= 70)
-        { finalTemperature =  finalTemperature - 3}
+        { finalTemperature =  finalTemperature - 2}
 
         if(reason["wind"] <= 8)
         { finalTemperature =  finalTemperature }
@@ -45,7 +45,7 @@ function getFeelingTheeWeather(reason){
         if(reason["cloudy"] <= 10 && reason["cloudy"] >=0)
         { finalTemperature =  finalTemperature + 2 }
         if(reason["cloudy"] <= 40 && reason["cloudy"] >=11)
-        { finalTemperature =  finalTemperature +1 }
+        { finalTemperature =  finalTemperature + 1 }
         if(reason["cloudy"] <= 100 && reason["cloudy"] >=41)
         { finalTemperature = finalTemperature}
         if(reason["cloudy"] === undefined)
