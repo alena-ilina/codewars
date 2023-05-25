@@ -58,11 +58,11 @@ function getBugsANDCrutchs(team) {
       сrutchs = сrutchs + team[employee] * 1 * 3;
     };
     if (employee === "juniorFrontend") {
-      bugs = bugs + team[employee] * 2 * 3;
+      bugs = bugs + team[employee] * 3 * 3;
       сrutchs = сrutchs + team[employee] * 4 * 3;
     };
     if (employee === "middleFrontend") {
-      bugs = bugs + team[employee] * 3 * 3;
+      bugs = bugs + team[employee] * 2 * 3;
       сrutchs = сrutchs + team[employee] * 3 * 3;
     };
     if (employee === "seniorFrontend") {
@@ -78,8 +78,6 @@ function getBugsANDCrutchs(team) {
   if ((teamEmployeeCount >= 8)) {
     bugs = bugs * teamSpiritCoeff;
   }
-
-  if (bugs > 60) throw new Error('Чёт поплохело от такого количества багов, простите');
 
   const result = `Итого: ${bugs} багов, ${сrutchs} костылей за квартал`
   teamEmployeeCount = 0
