@@ -16,8 +16,8 @@ function chooseAppetites(vineTitle) {
 
   const vines = vineTitle.split(',');
 
-  if (vines.length > 1) {
-    result.push('сыр, виноград');
+  if ((vines.length > 1) || (vineTitle.length === 9)) {
+    result.push('Давай по очереди. Сначала про одно вино спросишь, потом про другое.');
 
     if (vines.find((vine) => vine.length > 10)) {
       result.push('Такое название фиг запомнишь! Ну и вино же ты выбрал!');
@@ -40,6 +40,8 @@ function chooseAppetites(vineTitle) {
     return 'Такое название фиг запомнишь! Ну и вино же ты выбрал!'
   }
 
+  vineTitle = vineTitle.replace(/ /g,'');
+
   recievedVineTitles = vineTitle;
 
   switch (vineTitle) {
@@ -50,9 +52,7 @@ function chooseAppetites(vineTitle) {
     case 'Carmenere':
       return 'Не ищи особой закуски. Любой ужин будет с ним еще лучше!'
     case 'Красное вино':
-      return 'Тортик! Не, ну а чё!'
-    case '':
-      return '...'
+      return 'Так из тебя эстета не сделаешь. Нужно знать сорт винограда. Изучи на бутылке!'
   }
 
   return '';
