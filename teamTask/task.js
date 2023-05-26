@@ -1,7 +1,9 @@
 /* Код прогнозирует, сколько багов и костылей
 будет в команде за квартал в зависимости от её состава.
- Перепиши код так,чтобы все тесты в соседнем файле прошли успешно
-и котик получил свой клубок. Удачи!
+Перепиши код так,чтобы все тесты в соседнем файле прошли успешно.
+Тогда котик получит свой клубок. Удачи!
+P.S. Не забывай нажимать ctrl+S, чтобы видеть результаты 
+своих правок.
 */
 
 let team = {
@@ -38,37 +40,45 @@ function getBugsANDCrutchs(team) {
     if (team[employee] > 0) {
       teamEmployeeCount++;
     }
+
     if (employee === "trainee") {
       bugs = bugs + team[employee] * 1 * 3;
       сrutchs = сrutchs + team[employee] * 0 * 3;
 
     };
+
     if (employee === "juniorBackend") {
       bugs = bugs + team[employee] * 3 * 3;
       сrutchs = сrutchs + team[employee] * 1 * 3;
       if (team[employee] >= 2)
         return 'Астрологи предсказали квартал багов, количество багов увеличилось втрое!'
     };
+
     if (employee === "middleBackend") {
       bugs = bugs + team[employee] * 2 * 3;
       сrutchs = сrutchs + team[employee] * 3 * 3;
     };
+
     if (employee === "seniorBackend") {
       bugs = bugs + team[employee] * 1 * 3;
       сrutchs = сrutchs + team[employee] * 1 * 3;
     };
+
     if (employee === "juniorFrontend") {
       bugs = bugs + team[employee] * 3 * 3;
       сrutchs = сrutchs + team[employee] * 4 * 3;
     };
+
     if (employee === "middleFrontend") {
       bugs = bugs + team[employee] * 2 * 3;
       сrutchs = сrutchs + team[employee] * 3 * 3;
     };
+
     if (employee === "seniorFrontend") {
       bugs = bugs + team[employee] * 1 * 3;
       сrutchs = сrutchs + team[employee] * 1 * 3;
     };
+
     if (employee === "teamLead") {
       bugs = bugs + team[employee] * 1;
       сrutchs = сrutchs + team[employee] * 0 * 3;
